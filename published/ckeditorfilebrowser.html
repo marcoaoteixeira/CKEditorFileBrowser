@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="static/scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery-ui-1.8.11.min.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery-ui.layout.min.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery.treeview.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery.form.2.67.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery.blockui.js"></script>
+	<script type="text/javascript" src="static/scripts/ckeditor/ckeditor.js"></script>
+
+	<script type="text/javascript" src="static/scripts/swfobject.js"></script>
+	<script type="text/javascript" src="static/scripts/jquery.uploadify.v2.1.4.min.js"></script>
+
+	<script type="text/javascript" src="static/scripts/ckeditorfilebrowser.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="static/styles/jquery-ui-1.8.11.css" />
+	<link rel="stylesheet" type="text/css" href="static/styles/jquery.uploadify.css" />
+	<link rel="stylesheet" type="text/css" href="static/styles/ckeditorfilebrowser.css" />
+	<title></title>
+</head>
+<body>
+	<div class="header ui-layout-north ui-widget-content">
+		<h1>CKEditor File Browser</h1>
+	</div>
+	<div class="left ui-layout-west ui-widget-content">
+		<div class="treeview-controls-container">
+			<ul class="treeview-controls">
+				<li><a class="collapse" href="#" title="Contrair">Contrair</a></li>
+				<li><a class="expand" href="#" title="Expandir">Expandir</a></li>
+				<li><a class="toggle" href="#" title="Alternar">Alternar</a></li>
+				<li><a class="refresh" href="#" title="Atualizar">Atualizar</a></li>
+				<li><a class="add" href="#" title="Adicionar nova pasta">Adicionar nova pasta</a></li>
+				<li><a class="delete" href="#" title="Remover um arquivo ou pasta">Remover um arquivo ou pasta</a></li>
+			</ul>
+		</div>
+		<div class="treeview-container"></div>
+	</div>
+	<div class="content ui-layout-center ui-widget-content">
+		<div class="upload-message">
+			<h3>Instruções para upload de arquivos</h3>
+			<p>
+				Para realizar um upload, selecione a pasta de destino no navegador ao lado e,
+				em seguida, clique em "SELECIONAR". Selecione um arquivo para upload e clique
+				em "Enviar arquivos". Você pode selecionar mais de um arquivo por vez, se
+				precisar.
+			</p>
+		</div>
+		<div class="upload-files">
+			<ul>
+				<li><input type="file" id="uploadFile" name="file" value="" /></li>
+				<li><input type="button" id="sendFilesButton" value="Enviar arquivos" /></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer ui-layout-south ui-widget-content ui-state-error">
+		<form id="selectForm" action="ckeditorfilebrowser.html" method="get">
+			<fieldset>
+				<ul>
+					<li class="selected-item"><p><strong>Item selecionado:</strong><span></span></p></li>
+					<li><input type="button" id="selectItemButton" value="Selecionar item" /></li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="treeview-create-folder-dialog">
+		<div class="message">
+			<h3>Informação:</h3>
+			<p>
+				A nova pasta será relativa a pasta selecionada anteriormente no navegador de
+				arquivos. Você também pode optar por criar uma estrutura de pastas, a partir
+				de uma pasta relativa, adicionando o caractere &quot;/&quot; para separar os
+				níveis da mesma. Ex.:
+				<span>&quot;&lt;PASTA RELATIVA&gt;/Filho/Neto&quot;</span>
+				Isso irá criar uma pasta chamada &quot;Neto&quot;, dentro de uma pasta
+				chamada &quot;Filho&quot;, dentro da pasta relativa que foi selecionada.
+			</p>
+		</div>
+		<form action="Handlers/CreateFileBrowserNewFolder.ashx" method="post">
+			<fieldset>
+				<input type="hidden" id="relativeFolderHidden" name="relativeFolder" value="" />
+				<ul>
+					<li>
+						<label>Pasta relativa</label>
+						<span class="relative-folder"></span>
+					</li>
+					<li>
+						<label for="folderText">Nova pasta</label>
+						<input type="text" id="folderText" name="folder" value="" />
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="treeview-delete-item-dialog">
+		<form action="Handlers/DeleteFileBrowserItem.ashx" method="post">
+			<fieldset>
+				<input type="hidden" id="itemHidden" name="item" value="" />
+				<ul>
+					<li>
+						<p>Deseja realmente remover o item selecionado?</p>
+						<p class="item-tobe-deleted">Item selecionado: <strong></strong></p>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>

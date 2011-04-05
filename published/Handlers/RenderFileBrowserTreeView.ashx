@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="RenderFileBrowserTreeView.ashx.cs" Class="Jam.CKEditorFileBrowser.Web.Handlers.RenderFileBrowserTreeView" %>

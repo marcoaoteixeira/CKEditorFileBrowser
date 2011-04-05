@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="CreateFileBrowserNewFolder.ashx.cs" Class="Jam.CKEditorFileBrowser.Web.Handlers.CreateFileBrowserNewFolder" %>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="static/scripts/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="static/scripts/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="static/scripts/sample.js"></script>
+
+	<script language="javascript">
+		jQuery(document).ready(function () {
+			CKEDITOR.replace('content', {
+				filebrowserBrowseUrl: 'ckeditorfilebrowser.html',
+			});
+		});
+	</script>
+
+    <title>Sample</title>
+</head>
+<body>
+	<div class="page">
+		<textarea name="content" rows="100" cols="20"></textarea>
+	</div>
+</body>
+</html>
