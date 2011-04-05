@@ -1,0 +1,21 @@
+***** CKEditor File Browser ***** 
+
+Criei este plugin como uma alternativa .Net para os plugins existentes em PHP, Java e outras linguagens.
+Ele é bem simples e cumpre o seu trabalho.
+
+***** Modo de utilização *****
+
+Para utilizar o plugin você precisará dos seguintes itens
+
+	- jQuery (1.4.4+)		(http://jquery.com/)
+	- jQuery UI (1.8.11+)	(http://jqueryui.com/)
+	- jQuery UI Layout		(http://layout.jquery-dev.net/)
+	- jQuery Block UI		(http://jquery.malsup.com/block/)
+	- jQuery Form			(http://jquery.malsup.com/form/)
+	- jQuery TreeView		(http://jquery.bassistance.de/treeview/)
+	- jQuery Uploadify		(http://www.uploadify.com/)
+	- swfobject				(http://code.google.com/p/swfobject/)
+	- CKEditor				(http://ckeditor.com/)
+	
+Dentro do projeto, no arquivo "default.html" existe um exemplo de como integrar a sua aplicação com o
+CKEditor e com o CKEditor File Browser.
