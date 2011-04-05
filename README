@@ -1,11 +1,11 @@
-***** CKEditor File Browser ***** 
+ï»¿***** CKEditor File Browser ***** 
 
 Criei este plugin como uma alternativa .Net para os plugins existentes em PHP, Java e outras linguagens.
-Ele é bem simples e cumpre o seu trabalho.
+Ele Ã© bem simples e cumpre o seu trabalho.
 
-***** Modo de utilização *****
+***** Modo de utilizaÃ§Ã£o *****
 
-Para utilizar o plugin você precisará dos seguintes itens
+Para utilizar o plugin vocÃª precisarÃ¡ dos seguintes itens
 
 	- jQuery (1.4.4+)		(http://jquery.com/)
 	- jQuery UI (1.8.11+)	(http://jqueryui.com/)
@@ -17,5 +17,5 @@ Para utilizar o plugin você precisará dos seguintes itens
 	- swfobject				(http://code.google.com/p/swfobject/)
 	- CKEditor				(http://ckeditor.com/)
 	
-Dentro do projeto, no arquivo "default.html" existe um exemplo de como integrar a sua aplicação com o
+Dentro do projeto, no arquivo "default.html" existe um exemplo de como integrar a sua aplicaÃ§Ã£o com o
 CKEditor e com o CKEditor File Browser.
